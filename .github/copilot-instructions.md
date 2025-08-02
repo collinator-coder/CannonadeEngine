@@ -20,6 +20,7 @@
 - Minimal "vibe coding"—focus on clarity and learning. (Wait then why is there a copilot instructions file?)
 - Avoid writing directly to `main.ts`; use separate modules.
 - Reference `PRETTY.md` for style; following it is recommended but not strictly enforced.
+- Try using C-like conventions (more functional programming) so MakeCode is happier.
 
 ## Project Status & Priorities
 - No finished modules yet.
