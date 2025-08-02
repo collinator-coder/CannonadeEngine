@@ -34,7 +34,7 @@
 ## External References
 - For uncertain style decisions, see [TypeScript style guides](https://ts.dev/style/).
 - For module structure and naming conventions, refer to `PRETTY.md` and `README.md`.
-- For MakeCode magic see [Building your own extension](https://makecode.com/extensions/getting-started) from Microsoft/MakeCode.
+- For MakeCode magic see [Building your own extension](https://makecode.com/defining-blocks) from Microsoft/MakeCode. 
 
 ---
 **Example Pattern:**
