@@ -3,14 +3,7 @@
 ### Finished
 * literally nothing
 ### To-Do
-#### High Priority
-* Spring Physics 
-* Mesh Rendering
-#### Medium Priority
-* Softbodies
-#### Low Priority
-* Fluid Simulation
-* 3D Primitives
+Everything on To-Do is an issue. Just close the issue when you implement it.
 ## Contributing
 * Don't write to main.ts
 * This isn't a mixed language project; Please don't use python/blocks (Exceptions are listed in PRETTY.md).
