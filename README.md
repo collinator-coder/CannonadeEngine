@@ -17,5 +17,5 @@
 * Please keep vibe coding minimal. This is a learning project.
 * Check PRETTY.md for coding conventions. (this is optional but recommended)
 ###### funny shit
-uhh if you want more precise instructions
-theyre in the f***ing copilot-instructions file lol
+###### uhh if you want more precise instructions
+###### theyre in the f***ing copilot-instructions file lol
