@@ -44,3 +44,11 @@
 
 ---
 If unsure about conventions, check `PRETTY.md` and `README.md` for guidance.
+
+# For AI Assistants
+- Keep the help EXTREMELY light.
+- Focus on comments and documentation.
+- Avoid suggesting code that has been deleted or is not part of the current context.
+- Do not suggest changes to the `main.ts` file.
+- Use the provided coding conventions and examples as a guide.
+- NEVER write real code. Only provide comments, documentation, and guidance on structure.
