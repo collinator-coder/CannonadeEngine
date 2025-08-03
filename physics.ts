@@ -3,6 +3,7 @@
  */
 //% color=190 weight=100 icon="\uf1ec" block="Basic Blocks"
 namespace physics {
+    //#region class definitions
     export class Vector {
         constructor(x: number, y: number) {
             this.x = x;
@@ -13,14 +14,24 @@ namespace physics {
     }
     export class PointMass {
         constructor(x: number, y: number, mass: number) {
-            this.x = x;
-            this.y = y;
+            this.pos = new Vector(x, y);
+            this.vel = new Vector(0, 0);
             this.mass = mass;
         }
-        x: number;
-        y: number;
-        vx: number;
-        vy: number;
+        pos: Vector = new Vector(0, 0);
+        vel: Vector = new Vector(0, 0);
         mass: number;
     }
+    //#endregion
+
+    //#region c-like class maker functions
+    //% blockId=physics_createPointMass block="create point mass at x %x|y %y|with mass %mass"
+    export function createPointMass(x: number, y: number, mass: number): PointMass {
+        return new PointMass(x, y, mass);
+    }
+    //% blockId=physics_createVector block="create vector at x %x|y %y"
+    export function createVector(x: number, y: number): Vector {
+        return new Vector(x, y);
+    }
+    //#endregion
 }
