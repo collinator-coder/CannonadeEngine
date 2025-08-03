@@ -1,7 +1,7 @@
 /**
  * Provides access to Cannonade physics.
  */
-//% color=190 weight=100 icon="\uf1ec" block="Basic Blocks"
+//% color=190 weight=100 icon="\uf1ec" block="Cannonade Physics"
 namespace physics {
     //#region class definitions
     export class Vector {
