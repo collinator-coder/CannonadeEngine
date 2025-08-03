@@ -57,6 +57,21 @@ namespace physics {
 
     //#region vector operations
     //% blockId=physics_vector_add block="add vector %a|to vector %b"
-    
+    export function vectorAdd(a: Vector, b: Vector): Vector {
+        return a.vectorAdd(b);
+    }
+    //% blockId=physics_vector_subtract block="subtract vector %b|from vector %a"
+    export function vectorSubtract(a: Vector, b: Vector): Vector {
+        return a.vectorSubtract(b);
+    }
+    //% blockId=physics_vector_multiply block="multiply vector %a|by vector or number %b"
+    export function vectorMultiply(a: Vector, b: Vector | number): Vector {
+        return a.vectorMultiply(b);
+    }
+    //% blockId=physics_vector_divide block="divide vector %a|by vector or number %b"
+    export function vectorDivide(a: Vector, b: Vector | number): Vector {
+        return a.vectorDivide(b);
+    }
+    //#endregion
     
 }
