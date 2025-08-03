@@ -2,6 +2,7 @@
 Use `UpperCamelCase` for module names.
 Inside modules, use `lowerCamelCase` for classes.
 Inside classes, use `kebab-case`
+Use `//#region` and `//#endregion`
 ### example:
 `[ExampleModule].ts`
 ```

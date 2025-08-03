@@ -34,4 +34,11 @@ namespace physics {
         return new Vector(x, y);
     }
     //#endregion
+    
+    //#region vector operations
+    //% blockId=physics_vector_add block="add vector %a|to vector %b"
+    export function vectorAdd(a: Vector, b: Vector): Vector {
+        return new Vector(a.x + b.x, a.y + b.y);
+    }
+    
 }
