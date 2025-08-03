@@ -1,5 +1,5 @@
 /**
- * Provides access to basic micro:bit functionality.
+ * Provides access to Cannonade physics.
  */
 //% color=190 weight=100 icon="\uf1ec" block="Basic Blocks"
 namespace physics {
@@ -41,6 +41,32 @@ namespace physics {
         pos: Vector = new Vector(0, 0);
         vel: Vector = new Vector(0, 0);
         mass: number;
+        applyForce(force: Vector): void {
+            // F = m * a => a = F / m
+            const acceleration = force.vectorDivide(this.mass);
+            this.vel = this.vel.vectorAdd(acceleration);
+            this.pos = this.pos.vectorAdd(this.vel);
+        }
+        applyImpulse(impulse: Vector): void {
+            // Impulse changes velocity directly
+            this.vel = this.vel.vectorAdd(impulse.vectorDivide(this.mass));
+            this.pos = this.pos.vectorAdd(this.vel);
+        }
+        setPosition(x: number, y: number): void {
+            this.pos = new Vector(x, y);
+        }
+        setVelocity(x: number, y: number): void {
+            this.vel = new Vector(x, y);
+        }
+        getPosition(): Vector {
+            return this.pos;
+        }
+        getVelocity(): Vector {
+            return this.vel;
+        }
+        getMass(): number {
+            return this.mass;
+        }
     }
     //#endregion
 
@@ -74,4 +100,34 @@ namespace physics {
     }
     //#endregion
     
+    //#region point mass operations
+    //% blockId=physics_point_mass_apply_force block="apply force %force|to point mass %pm"
+    export function applyForceToPointMass(pm: PointMass, force: Vector): void {
+        pm.applyForce(force);
+    }
+    //% blockId=physics_point_mass_apply_impulse block="apply impulse %impulse|to point mass %pm"
+    export function applyImpulseToPointMass(pm: PointMass, impulse: Vector): void {
+        pm.applyImpulse(impulse);
+    }
+    //% blockId=physics_point_mass_set_position block="set position of point mass %pm|to x %x|y %y"
+    export function setPointMassPosition(pm: PointMass, x: number, y: number): void {
+        pm.setPosition(x, y);
+    }
+    //% blockId=physics_point_mass_set_velocity block="set velocity of point mass %pm|to x %x|y %y"
+    export function setPointMassVelocity(pm: PointMass, x: number, y: number): void {
+        pm.setVelocity(x, y);
+    }
+    //% blockId=physics_point_mass_get_position block="get position of point mass %pm"
+    export function getPointMassPosition(pm: PointMass): Vector {
+        return pm.getPosition();
+    }
+    //% blockId=physics_point_mass_get_velocity block="get velocity of point mass %pm"
+    export function getPointMassVelocity(pm: PointMass): Vector {
+        return pm.getVelocity();
+    }
+    //% blockId=physics_point_mass_get_mass block="get mass of point mass %pm"
+    export function getPointMassMass(pm: PointMass): number {
+        return pm.getMass();
+    }
+    //#endregion
 }
