@@ -11,6 +11,26 @@ namespace physics {
         }
         x: number;
         y: number;
+        vectorAdd(b: Vector): Vector {
+            return new Vector(this.x + b.x, this.y + b.y);
+        }
+        vectorSubtract(b: Vector): Vector {
+            return new Vector(this.x - b.x, this.y - b.y);
+        }
+        vectorMultiply(b: Vector | number): Vector {
+            if (typeof b === "number") {
+                return new Vector(this.x * b, this.y * b);
+            } else {
+                return new Vector(this.x * b.x, this.y * b.y);
+            }
+        }
+        vectorDivide(b: Vector | number): Vector {
+            if (typeof b === "number") {
+                return new Vector(this.x / b, this.y / b);
+            } else {
+                return new Vector(this.x / b.x, this.y / b.y);
+            }
+        }
     }
     export class PointMass {
         constructor(x: number, y: number, mass: number) {
@@ -34,11 +54,9 @@ namespace physics {
         return new Vector(x, y);
     }
     //#endregion
-    
+
     //#region vector operations
     //% blockId=physics_vector_add block="add vector %a|to vector %b"
-    export function vectorAdd(a: Vector, b: Vector): Vector {
-        return new Vector(a.x + b.x, a.y + b.y);
-    }
+    
     
 }
