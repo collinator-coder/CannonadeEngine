@@ -2,7 +2,10 @@
     "name": "Cannonade",
     "version": "0.0.0",
     "files": [
-        "main.ts"
+        "main.ts",
+        "physics.ts",
+        "README.md",
+        "PRETTY.md"
     ],
     "supportedTargets": [
         "arcade"
