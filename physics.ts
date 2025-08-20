@@ -70,7 +70,7 @@ namespace physics {
     }
     //#endregion
 
-    //#region c-like class maker functions
+    //#region functional class definition functions
     //% blockId=physics_createPointMass block="create point mass at x %x|y %y|with mass %mass"
     export function createPointMass(x: number, y: number, mass: number): PointMass {
         return new PointMass(x, y, mass);
