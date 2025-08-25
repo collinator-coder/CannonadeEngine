@@ -70,7 +70,13 @@ namespace physics {
     }
     //#endregion
 
-    //#region functional class definition functions
+    //#region Internal Helpers
+    abstract class VectorOperations {
+        
+    }
+    //#endregion
+
+    //#region c-like class maker functions
     //% blockId=physics_createPointMass block="create point mass at x %x|y %y|with mass %mass"
     export function createPointMass(x: number, y: number, mass: number): PointMass {
         return new PointMass(x, y, mass);
@@ -128,6 +134,32 @@ namespace physics {
     //% blockId=physics_point_mass_get_mass block="get mass of point mass %pm"
     export function getPointMassMass(pm: PointMass): number {
         return pm.getMass();
+    }
+    //#endregion
+
+    //#region Constraints
+    export enum ConstraintType {
+        CONNECT = 0,
+        SPRING = 1
+    }
+    export class Constraint {
+        constructor(kind: ConstraintType, point1: PointMass, point2: PointMass, distance: number, springStrength?: number) {
+            this.kind = kind;
+            this.point1 = point1;
+            this.point2 = point2;
+            this.springStrength = springStrength;
+            this.distance = distance;
+        }
+
+        kind: ConstraintType;
+        point1: PointMass;
+        point2: PointMass;
+        distance: number;
+        springStrength: number;
+
+        springUpdate() {
+            
+        }
     }
     //#endregion
 }
